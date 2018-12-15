@@ -1,0 +1,14 @@
+prefix=/opt/mxe/usr/x86_64-pc-linux-gnu/qt5
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Network
+Description: Qt Network module
+Version: 5.12.0
+Libs: -L${libdir} -lQt5Network 
+Libs.private: -L/opt/mxe/usr/x86_64-pc-linux-gnu/qt5/lib -lQt5Core -lm -lz -lqtpcre2 -ldl -lpthread -lz   
+Cflags: -DQT_NETWORK_LIB -I${includedir}/QtNetwork -I${includedir}
+Requires: Qt5Core
+
